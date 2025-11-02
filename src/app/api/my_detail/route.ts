@@ -6,8 +6,6 @@ import User from "@/app/model/userSchema";
 export async function POST(req: NextRequest) {
 
     await dbConnect()
-
-
     const request =await req.json()
     const token = await request.token
 

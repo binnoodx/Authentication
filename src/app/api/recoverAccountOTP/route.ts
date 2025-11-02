@@ -38,6 +38,7 @@ export async function POST(req: NextRequest) {
                 const tokenSentForReset = jwt.sign(tokenData, process.env.TOKEN_SECRET!, {
                     expiresIn: "10m"
                 })
+                console.log("Token is " , tokenSentForReset)
                 const response = NextResponse.json({
                     token: tokenSentForReset,
                     message: "User Verified Successfully !",

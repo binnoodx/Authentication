@@ -46,7 +46,7 @@ const Page = () => {
     setLoading(false)
 
     if (res.status) {
-      Router.push("/")
+      Router.push("/home")
     }
     else{
       setApiError(res.message)
